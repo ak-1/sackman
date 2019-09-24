@@ -1,4 +1,4 @@
-# SackMan - Filesystem monitoring with Fuse
+# SackMan
 
 ## Description
 
@@ -11,6 +11,7 @@ The C code is based on Remi Flament's LoggedFS (https://github.com/rflament/logg
     $ make
     $ sudo make install
 or
+
     $ PREFIX=$HOME/.local make -e install
 
 SackMan has the following dependencies:
