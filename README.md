@@ -31,4 +31,7 @@ or
 
 sackman has the following dependencies:
 
+    podman
+    buildah
     fuse
+    rsync
