@@ -15,7 +15,11 @@ Call sackman like you would call podman run:
 While the container is running sackman will record all accessed file paths.
 Finally a copy of the origial image will be created containing only the accessed files.
 
-You can control the final image name via the DST_IMAGE environment variable.
+You can configure sackman with the following environment variables:
+
+    DST_IMAGE - The name of the final image.
+    RSYNC_FILES - A path to a file containing additional files to copy.
+    RSYNC_OPTS - Can be set to "-v" to output all copied files.
 
 ## Installation
 
