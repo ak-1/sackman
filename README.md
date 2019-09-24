@@ -1,8 +1,8 @@
-# SackMan
+# sackman
 
 ## Description
 
-SackMan helps you reducing the size of your containers to a minimum.
+sackman helps you reducing the size of your containers to a minimum.
 
 The C code is based on Remi Flament's LoggedFS (https://github.com/rflament/loggedfs).
 
@@ -14,7 +14,7 @@ or
 
     $ PREFIX=$HOME/.local make -e install
 
-SackMan has the following dependencies:
+sackman has the following dependencies:
 
     fuse
 
