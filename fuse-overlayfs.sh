@@ -2,4 +2,4 @@
 
 fuse-overlayfs "$@"
 
-$SACKMAN_PREFIX/lib/sackman/sackman.bin "${@: -1}"
+$SACKMAN_PREFIX/lib/sackman/sackman.bin -p "${@: -1}"
