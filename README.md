@@ -40,3 +40,13 @@ sackman has the following dependencies:
     buildah
     fuse
     rsync
+
+You also need the usual build tools to compile sackman.
+
+Install fuse on Fedora with:
+
+    dnf install fuse-devel
+
+Install fuse on Depian/Ubuntu with:
+
+    apt install libfuse-dev
