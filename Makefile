@@ -2,7 +2,7 @@
 PREFIX=/usr/local
 CC=g++
 CFLAGS=-Wall -ansi -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=26 -DELPP_SYSLOG -DELPP_NO_DEFAULT_LOG_FILE -DELPP_THREAD_SAFE -std=c++11
-LDFLAGS=-Wall -ansi -lfuse -lpthread
+LDLIBS=-lfuse -lpthread
 builddir=build
 
 all: $(builddir) $(builddir)/sackman
@@ -11,10 +11,10 @@ $(builddir):
 	mkdir $(builddir)
 
 sackman.bin: $(builddir)/sackman.o
-	$(CC) -o $(builddir)/sackman.bin $(builddir)/sackman.o $(LDFLAGS)
+	$(CC) -o $(builddir)/sackman.bin $(builddir)/sackman.o $(LDLIBS)
 
 $(builddir)/sackman.o: sackman.cpp
-	$(CC) -o $(builddir)/sackman.o -c sackman.cpp $(CFLAGS)
+	$(CC) $(CFLAGS) -o $(builddir)/sackman.o -c sackman.cpp
 
 install: $(builddir) sackman.bin
 	install -v -D sackman.sh ${PREFIX}/bin/sackman
