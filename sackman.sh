@@ -5,7 +5,14 @@ export SACKMAN_PREFIX="$( dirname "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/de
 source $SACKMAN_PREFIX/lib/sackman/util.sh
 
 usage() {
-    echo "usage: $(basename "$0") run [flags] IMAGE [COMMAND [ARG...]]" >/dev/stderr
+    cat <<EOF >/dev/stderr
+usage: $(basename "$0") run [flags] IMAGE [COMMAND [ARG...]]"
+
+NOTE: For options that appear prior to the image name:
+      Do not put a space in front of option-values.
+      Use --option-name=VALUE or -oVALUE instead.
+      Otherwise sackman may not identify the image name correctly.
+EOF
     exit 1
 }
 
