@@ -14,7 +14,8 @@ Call sackman like you would call `podman run`:
 
     $ DST_IMAGE=test sackman run docker.io/library/ubuntu:14.04 cat /etc/lsb-release
 
-**NOTE**: Do *not* put a space in front of option-values. Use `--option-name=VALUE` or `-oVALUE` instead.
+**NOTE**: For options that appear prior to the image name:
+Do *not* put a space in front of option-values. Use `--option-name=VALUE` or `-oVALUE` instead.
 Otherwise sackman may not identify the image name correctly.
 
 While the container is running sackman will record all accessed file paths.
