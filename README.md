@@ -4,7 +4,7 @@
 
 ## Description
 
-Sackman helps you to reduce the size of containers by throwing out all unused files.
+Sackman shrinks containers by throwing out unused files.
 
 The C code is based on Remi Flament's LoggedFS (https://github.com/rflament/loggedfs).
 
@@ -51,3 +51,4 @@ Install fuse on Fedora with:
 Install fuse on Depian/Ubuntu with:
 
     apt install libfuse-dev
+
