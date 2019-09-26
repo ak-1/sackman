@@ -18,7 +18,7 @@ Call sackman like you would call podman run:
 Otherwise sackman may not identify the image name correctly.
 
 While the container is running sackman will record all accessed file paths.
-Finally a copy of the origial image will be created containing only the accessed files.
+Finally a squashed copy of the origial image will be created containing only the accessed files.
 
 You can configure sackman with the following environment variables:
 
