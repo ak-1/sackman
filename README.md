@@ -14,10 +14,10 @@ Call sackman like you would call podman run:
 
     $ DST_IMAGE=test sackman run docker.io/library/ubuntu:14.04 cat /etc/lsb-release
 
-NOTE: sackman passes all arguments through to podman.
-It only interprets the first two arguments that do not start with a '-'.
+_NOTE_: Sackman passes all arguments through to podman.
+It only interprets the first two arguments that do not start with a `'-'`.
 The first always has to be "run". The second is interpreted as the image name.
-Use the "--option-name=ARG" notation for podman options with arguments that appear before the image name.
+Do not put a space between an option and it's value (use `--option-name=VALUE` or `-oVALUE`) for podman options that appear before the image name.
 
 While the container is running sackman will record all accessed file paths.
 Finally a copy of the origial image will be created containing only the accessed files.
