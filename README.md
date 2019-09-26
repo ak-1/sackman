@@ -1,5 +1,7 @@
 # sackman
 
+[![Build Status](https://travis-ci.org/ak-1/sackman.svg?branch=master)](https://travis-ci.org/ak-1/sackman)
+
 ## Description
 
 sackman helps you reducing the size of your containers to a minimum.
