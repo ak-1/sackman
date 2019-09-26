@@ -10,7 +10,7 @@ The C code is based on Remi Flament's LoggedFS (https://github.com/rflament/logg
 
 ## Usage example
 
-Call sackman like you would call podman run:
+Call sackman like you would call `podman run`:
 
     $ DST_IMAGE=test sackman run docker.io/library/ubuntu:14.04 cat /etc/lsb-release
 
