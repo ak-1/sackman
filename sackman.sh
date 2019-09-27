@@ -21,7 +21,12 @@ EOF
 SACKMAN_MOUNT=$SACKMAN_PREFIX/lib/sackman/fuse-overlayfs.sh
 SACKMAN_RSYNC=$SACKMAN_PREFIX/lib/sackman/rsync.sh
 
-export SACKMAN_OUTFILE="/tmp/sackman.$USER.$$"
+if [[ -n "$FILE_LOG" ]]
+then
+    export SACKMAN_OUTFILE="$(realpath "$FILE_LOG")"
+else
+    export SACKMAN_OUTFILE="/tmp/sackman.$USER.$$"
+fi
 
 for arg in "$@"
 do
@@ -59,4 +64,4 @@ call buildah commit --squash $DST_CONT "$DST_IMAGE" || exit
 
 call buildah rm $DST_CONT
 
-call rm $SACKMAN_OUTFILE || exit
+[[ -z "$FILE_LOG" ]] && call rm $SACKMAN_OUTFILE || exit

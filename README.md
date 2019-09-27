@@ -24,6 +24,7 @@ Finally a squashed copy of the origial image will be created containing only the
 You can configure sackman with the following environment variables:
 
     DST_IMAGE - The name of the final image.
+    FILE_LOG - Accessed paths are written to this file.
     RSYNC_FILES - A path to a file containing additional files to copy.
     RSYNC_OPTS - Can be set to "-v" to output all copied files.
 
